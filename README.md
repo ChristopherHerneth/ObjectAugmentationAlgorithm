@@ -15,7 +15,7 @@ numpy, scipy, pickle, plotly, OpenSim4.4 api for python,
 ## Install OpenSim 4.4 for Python in windows
 Common errors: module _simbody not found:
 1. delete previous OpenSim versions from path or at least move below opensim 4.4
-2. Download the Anaconda environment file (conda_env.yml) https://simtk-confluence.stanford.edu:8443/download/attachments/29165295/conda_env.yml?version=1&modificationDate=1643835525076&api=v2 and place it in a directory of your choice (conveniently in C:\OpenSim4.4\sdk\Python)
+2. Download the Anaconda environment file (conda_env.yml) https://simtk-confluence.stanford.edu:8443/download/attachments/29165295/conda_env.yml?version=1&modificationDate=1643835525076&api=v2 and place it in a directory of your choice (conveniently in C:\OpenSim4.4\sdk\Python). There is a copy of this file inside this repo too.
 3. open an Anaconda powershell
 4. conda init cmd.exe
 5. cd C:\OpenSim4.4\sdk\Python
