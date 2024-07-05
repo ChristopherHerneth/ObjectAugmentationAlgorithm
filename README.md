@@ -9,6 +9,34 @@ object induced interaction wrench from optical markers," 2024 IEEE International
 
 When using the algorithm in your work please cite the work mentioned above.
 
+# Workflow
+The algorithm uses the OpenSim4.4 Api to compute inverse kinematics and inverse dynamics.
+## 1. Prepare MoCap data
+This is the data of the human trial. 
+- Required markers: Elbow, Wrist (Radial and Ulnar styloids), Hand (minimum 3 markers)
+- Dataformat: .trc format
+- Orientation: must match with the OpenSim coordinate frame (y-axis up). This is important for the correct direction of gravity
+
+## 2. Compute hand coordinate frames
+For each input marker frame a hand coordnate frame is computed, where objects are places
+
+## 3. Make object models
+Create an OpenSim model of the object being manipulated in human trials
+
+## 4 Generate Object Kinematics
+First trajectories of virtual object markers are computed from hand coordinate frames, by placing object markers (3 for each rigid object) within each hand 
+frame that describe the location and orientation of the object to be simulated. For example, a can could be placed such that it is centrally
+grasped in the hand. For this markers at the cans CoM, top and somewhere at the circumference could be chosen.
+
+Second object motion is computed via inverse kinematics with the OpenSim inverse kinematics solver.
+
+## 5 Generate Object Dynamics
+The object model and object motion computed in the previos step are used to compute the wrench necessary to move objects along the prescribed trajectory via
+inverse kinematics with the OpenSim inverse dynamics tool.
+
+## 6 Simulate Object Manipulation
+The inverse dynamics result can be used in an external loads file, to apply the object wrench to the hand of the subject, which simulated object manipulation.
+
 # Dependencies
 numpy, scipy, pickle, plotly, OpenSim4.4 api for python, 
 
@@ -43,5 +71,4 @@ Common errors: module _simbody not found:
     are you using the correct environment? OpenSim44? This error usually occurs if opensim is not installed in that environment
 
 # Prepare MoCap data
-- needs to be in .trc format
-- make sure its orientation matches with the OpenSim coordinate frame (y-axis up). This is important for the correct direction of gravity
+-
