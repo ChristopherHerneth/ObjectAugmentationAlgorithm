@@ -69,6 +69,3 @@ Common errors: module _simbody not found:
 
 - AttributeError: module 'os' has no attribute 'add_dll_directory'
     are you using the correct environment? OpenSim44? This error usually occurs if opensim is not installed in that environment
-
-# Prepare MoCap data
--
