@@ -7,7 +7,7 @@ For algorithm details and validation, please refer to the publication:
 C. Herneth et al., "Object Augmentation Algorithm: Computing virtual object motion and
 object induced interaction wrench from optical markers," 2024 IEEE International Conference on Intelligent Robots and Systems (IROS)
 
-When using the algorithm in your work please cite the work mentioned above.
+When using the algorithm in your work please cite the work mentioned above, as well as this repository [![DOI](https://zenodo.org/badge/823587380.svg)](https://zenodo.org/doi/10.5281/zenodo.12666596)
 
 # Workflow
 The algorithm uses the OpenSim4.4 Api to compute inverse kinematics and inverse dynamics.
