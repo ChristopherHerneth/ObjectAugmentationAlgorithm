@@ -41,7 +41,6 @@ The inverse dynamics result can be used in an external loads file, to apply the 
 numpy, scipy, pickle, plotly, OpenSim4.4 api for python, 
 
 ## Install OpenSim 4.4 for Python in windows
-Common errors: module _simbody not found:
 1. delete previous OpenSim versions from path or at least move below opensim 4.4
 2. Download the Anaconda environment file (conda_env.yml) https://simtk-confluence.stanford.edu:8443/download/attachments/29165295/conda_env.yml?version=1&modificationDate=1643835525076&api=v2 and place it in a directory of your choice (conveniently in C:\OpenSim4.4\sdk\Python). There is a copy of this file inside this repo too.
 3. open an Anaconda powershell
@@ -56,6 +55,10 @@ Common errors: module _simbody not found:
     import os
     os.add_dll_directory("C:/OpenSim4.4/bin") # or however the location is called on your PC
 
+## Common errors with the OpenSim Api
+- module _simbody not found:
+    follow the installation instructions above. Has os.add_dll_directory("C:/OpenSim4.4/bin") been added to the script?
+  
 - scale tool doesnt work
     use absolute path to required files. Otherwise the tool returns an error
 
