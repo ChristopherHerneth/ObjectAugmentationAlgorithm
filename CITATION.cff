@@ -6,4 +6,7 @@ authors:
 orcid: https://orcid.org/0000-0002-7875-6604
 title: Object Augmentation Algorithm
 version: v1.0.0
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.12666597
 date-released: 2024-07-05
