@@ -2,7 +2,9 @@ import os
 os.add_dll_directory("C:/OpenSim4.4/bin") # otherwise module _sombody not found error!
 import numpy as np
 
-def createFile_trc(path, filename, MarkerData, MarkerNames, DataRate=100, Unit='mm'): #Datarate [Hz]
+def createFile_trc(path, filename, MarkerData, MarkerNames, DataRate=100, Unit='mm'): 
+    # This function was ported to python from https://simtk.org/projects/batchprocesstrc
+    # Datarate [Hz]
     # OpenSim: The x-axis of the model coordinate system points forward from the model, the y-axis points upward, and the z-axis points to the right of the model.
     def createRow4(MarkerNames):
         Temp  = ['Frame#' + '\t' + 'Time' + '\t']
